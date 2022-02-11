@@ -6,9 +6,3 @@ export interface Album {
     coverImage: string,
     tracks: Track[],
 }
-
-export interface CD {
-    id: number,
-    artist: string,
-    album: Album,
-}
