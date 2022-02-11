@@ -1,14 +1,14 @@
 import { Track } from "./track";
 
-export interface CD {
+export interface Album {
     name: string,
     releaseDate: string,
     coverImage: string,
     tracks: Track[],
 }
 
-export interface Album {
+export interface CD {
     id: number,
     artist: string,
-    album: CD,
+    album: Album,
 }
