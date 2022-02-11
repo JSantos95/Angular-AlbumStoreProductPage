@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 import 'rxjs/add/operator/map';
 
-import { CD } from './album';
+import { Album, CD } from './album';
 
 @Injectable()
 export class ProductService {
@@ -13,8 +13,8 @@ export class ProductService {
 
   constructor(private _http: Http) { }
 
-  getAlbum(id: number): Observable<CD> {
-    return this._http.get(this._albumUrl).map((response) => <CD>response.json())
+  getAlbum(id: number): Observable<Album> {
+    return this._http.get(this._albumUrl).map((response) => <Album>response.json())
   }
 
 }
